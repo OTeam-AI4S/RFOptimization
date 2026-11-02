@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rfoptimization"
+version = "0.1.0"
+description = "Gradient-guided biomolecular sequence optimization with OFoldX model pipelines"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE.md" }
+authors = [
+  { name = "Odin Zhang" },
+  { name = "Jiaqi Wang" },
+  { name = "Tuscan Rock Thompson" },
+  { name = "Ziyi You" },
+  { name = "Zihao Song" },
+  { name = "Frank DiMaio" },
+  { name = "David Baker" },
+]
+classifiers = [
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "atomworks[ml]>=2.1.1",
+  "biopython>=1.83",
+  "biotite>=1.2",
+  "dm-tree>=0.1.6",
+  "hydra-core>=1.3.0",
+  "numpy>=1.26",
+  "pyyaml>=6.0",
+  "torch>=2.5.0",
+]
+
+[project.scripts]
+rfo = "rfo.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rfo"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/rfo/backprop/configs" = "rfo/backprop/configs"
+"src/rfo/cycling/configs" = "rfo/cycling/configs"
+"src/rfo/cycling/examples" = "rfo/cycling/examples"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "tests/**",
+  "data/**",
+  "outputs/**",
+  "**/__pycache__/**",
+  "**/*.pyc",
+]

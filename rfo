@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Source-tree launcher. Install RFO and OFoldX in this Python environment first.
+set -euo pipefail
+RFO_SRC="$(cd "$(dirname "$0")/src" && pwd)"
+exec env PYTHONPATH="$RFO_SRC:${PYTHONPATH:-}" "${RFO_PYTHON:-python}" -m rfo.cli "$@"

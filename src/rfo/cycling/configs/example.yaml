@@ -1,0 +1,26 @@
+# Minimal one-complex example. Set input_structure and out_dir for your run.
+input_structure: ./src/rfo/cycling/examples/example_complex.cif
+out_dir: ./outputs/example
+backprop_fraction: 0.5
+optimizer_config: ./src/rfo/backprop/configs/cycle_ppi.yaml
+total_cycles: 10
+loss: pae_interface_mean
+mpnn_num_seqs: 1
+mpnn_temperature: 0.1
+seed: 42
+
+# Optional conditioning:
+# msa_paths:
+#   B: /path/to/target.a3m
+# paired_msa_paths:
+#   A: /path/to/binder.a3m
+#   B: /path/to/target.a3m
+# templates:
+#   B: /path/to/target.cif
+
+# Model overrides are optional; defaults are provided by OFoldX model repos.
+# assets:
+#   protenix_model: oteam/protenix
+#   boltz_model: oteam/boltz2
+#   mpnn_model_type: protein_mpnn
+#   mpnn_model: /path/to/ofoldx-model-repository
