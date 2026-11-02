@@ -26,24 +26,18 @@ install .` instead.
 
 ## 3. Install OFoldX separately
 
-In the same activated environment, install OFoldX explicitly. The current
-OFoldX release can be installed from PyPI:
+RFO requires the OFoldX changes maintained in the public
+[`rfo-integration` branch of the RFO-compatible OFoldX fork](https://github.com/OTeam-AI4S/OFoldX-for-RFO/tree/rfo-integration).
+In the same activated environment, install that branch:
 
 ```bash
-python -m pip install ofoldx
+python -m pip install "git+https://github.com/OTeam-AI4S/OFoldX-for-RFO.git@rfo-integration"
 ```
 
-If that release does not include the APIs required by your RFO checkout, install
-the latest OFoldX source instead:
-
-```bash
-python -m pip install "git+https://github.com/OTeam-AI4S/OFoldX.git"
-```
-
-OFoldX is intentionally not listed as an RFO dependency. The installed
-OFoldX version must provide the Protenix differentiable pipeline, Boltz-2
-pipeline, and MPNN pipelines used by this RFO version. Install or upgrade OFoldX
-in the same environment as RFO before running the workflow.
+Do not substitute the OFoldX PyPI release or upstream `main` for this RFO
+integration branch; they may not contain the APIs and compatibility changes
+RFO uses. OFoldX is intentionally not listed as an RFO dependency, so install
+it explicitly after RFO and keep both packages in the same environment.
 
 ## 4. Model repositories and cache
 

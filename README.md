@@ -7,11 +7,13 @@ Protenix gradient-guided sequence optimization step with probability
 ProteinMPNN or LigandMPNN then redesigns the unfixed residues of chain A, and
 the redesigned complex seeds the next cycle.
 
-RFO owns the optimization and cycling logic. It uses [OFoldX](https://github.com/OTeam-AI4S/OFoldX)
-as an external Python package for Protenix, Boltz-2, and MPNN inference. OFoldX
-and RFO must be installed in the same Python environment; OFoldX is installed
-separately and is intentionally not an RFO package dependency. Model weights are
-downloaded and cached by OFoldX.
+RFO owns the optimization and cycling logic. It uses the
+[RFO-compatible OFoldX fork](https://github.com/OTeam-AI4S/OFoldX-for-RFO),
+specifically its `rfo-integration` branch, as an external Python package for
+Protenix, Boltz-2, and MPNN inference. OFoldX and RFO must be installed in the
+same Python environment; OFoldX is installed separately and is intentionally
+not an RFO package dependency. Model weights are downloaded and cached by
+OFoldX.
 
 ## Installation
 
@@ -20,8 +22,7 @@ then install RFO and OFoldX in the same environment:
 
 ```bash
 python -m pip install -e .
-# Install OFoldX separately by following its installation guide:
-# https://github.com/OTeam-AI4S/OFoldX
+python -m pip install "git+https://github.com/OTeam-AI4S/OFoldX-for-RFO.git@rfo-integration"
 ```
 
 See the [installation guide](docs/installation.md) for environment setup,
