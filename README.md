@@ -28,6 +28,17 @@ python -m pip install "git+https://github.com/OTeam-AI4S/OFoldX-for-RFO.git@rfo-
 See the [installation guide](docs/installation.md) for environment setup,
 model defaults, cache settings, and GPU notes.
 
+## Documentation site
+
+The project documentation is built with MkDocs Material. To preview it locally:
+
+```bash
+python -m pip install -r docs/requirements.txt
+python -m mkdocs serve
+```
+
+Then open the local address printed by MkDocs, usually `http://127.0.0.1:8000`.
+
 ## Run an optimization
 
 From the RFO project root:

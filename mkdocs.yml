@@ -1,0 +1,87 @@
+site_name: RFOptimization
+site_description: Iterative biomolecular design optimization with Protenix, Boltz-2, and OFoldX MPNN.
+site_author: RFOptimization contributors
+repo_name: OTeam-AI4S/RFO
+repo_url: https://github.com/OTeam-AI4S/RFO
+edit_uri: edit/main/docs/
+
+docs_dir: docs
+site_dir: site
+
+nav:
+  - Home: index.md
+  - Get Started:
+      - Installation: installation.md
+      - Quickstart: quickstart.md
+  - Workflow: workflow.md
+  - Configuration: configuration.md
+  - Outputs: outputs.md
+  - Manual Runs: manual_workflow_cases.md
+  - About:
+      - Citation: about/citation.md
+      - License: about/license.md
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - content.code.copy
+    - navigation.footer
+    - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - toc.follow
+  font:
+    text: Noto Sans
+    code: Noto Sans Mono
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OTeam-AI4S/RFO
+      name: RFO on GitHub
+
+copyright: RFOptimization contributors
