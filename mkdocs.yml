@@ -1,4 +1,5 @@
 site_name: RFOptimization
+site_url: https://oteam-ai4s.github.io/RFO/
 site_description: Iterative biomolecular design optimization with Protenix, Boltz-2, and OFoldX MPNN.
 site_author: RFOptimization contributors
 repo_name: OTeam-AI4S/RFO
