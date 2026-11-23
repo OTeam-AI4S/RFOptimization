@@ -1,0 +1,21 @@
+.structure-viewer {
+  width: 100%;
+  margin: 1.25rem 0 0.5rem;
+  overflow: hidden;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.6rem;
+  background: #fff;
+}
+
+.structure-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 32rem;
+  border: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .structure-viewer iframe {
+    height: 25rem;
+  }
+}

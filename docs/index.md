@@ -25,6 +25,21 @@ rfo --config src/rfo/cycling/configs/example.yaml --total-cycles 1
 [Installation guide](installation.md){ .md-button }
 [Quickstart](quickstart.md){ .md-button }
 
+## Explore a protein structure
+
+Rotate and inspect an example protein–peptide complex in the interactive Mol* viewer. This entry is also used in the [manual RFO workflow examples](manual_workflow_cases.md).
+
+<div class="structure-viewer">
+  <iframe
+    src="https://molstar.org/viewer/?pdb=2O9V&amp;pdb-provider=rcsb&amp;collapse-left-panel=1"
+    title="Interactive 3D view of PDB 2O9V"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+Structure: [PDB 2O9V](https://www.rcsb.org/structure/2O9V). The viewer is provided by [Mol*](https://molstar.org/viewer-docs/); the structure is fetched from RCSB PDB when the viewer loads.
+
 ## How a cycle works
 
 ```mermaid
